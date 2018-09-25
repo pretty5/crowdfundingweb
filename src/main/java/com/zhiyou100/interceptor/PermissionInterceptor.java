@@ -23,6 +23,7 @@ import java.util.List;
  @Date:2018/9/19 9:21 
  @Version:v1.0
 */
+/* 权限拦截，设置加上注释的才能执行请求（管理员审核用的）*/
 public class PermissionInterceptor implements HandlerInterceptor {
     @Autowired
     AdminService adminService;
