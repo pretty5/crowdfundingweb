@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhiyou100.dao.RealCheckDao" >
+  <insert id="insert" parameterType="com.zhiyou100.entity.RealCheckEntity">
+    insert into real_check
+    (phone,id_card,id_card_positive,id_card_negative,id_card_hand,status)
+    values
+    (#{phone},#{idCard},#{idCardPositive},#{idCardNegative},#{idCardHand},#{status})
+  </insert>
+  <sql id="realCheckColumns" >
+     id,phone,id_card,id_card_positive,id_card_negative,id_card_hand,status
+  </sql>
+
+  <resultMap id="realCheck" type="com.zhiyou100.entity.RealCheckEntity">
+    <id property="id" column="id"></id>
+    <result property="phone" column="phone"></result>
+    <result property="idCard" column="id_card"></result>
+    <result property="idCardPositive" column="id_card_positive"></result>
+    <result property="idCardNegative" column="id_card_negative"></result>
+    <result property="idCardHand" column="id_card_hand"></result>
+    <result property="status" column="status"></result>
+  </resultMap>
+
+
+  <select id="unRealCheckedList" resultMap="realCheck">
+    select
+    <include refid="realCheckColumns"></include>
+    from real_check
+    where  status=0
+  </select>
+
+
+  <update id="updateStatusById" >
+    update real_check set status=#{status} where id=#{id}
+  </update>
+
+  <select id="findById" resultMap="realCheck">
+    select
+    <include refid="realCheckColumns"></include>
+    from real_check
+    where  id=#{id}
+
+
+  </select>
+
+</mapper>
