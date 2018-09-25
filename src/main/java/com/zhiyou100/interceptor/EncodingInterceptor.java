@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
  @Date:2018/9/17 10:53 
  @Version:v1.0
 */
+
+/* 编码设置拦截过滤*/
 public class EncodingInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
