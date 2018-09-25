@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
  @Date:2018/9/18 17:28 
  @Version:v1.0
 */
+
+/*出现异常，调用此类处理，自己实现的*/
 @Slf4j
 public class ExceptionController {
     //表示的是当该类 的方法 出现异常时  会调用该方法处理
