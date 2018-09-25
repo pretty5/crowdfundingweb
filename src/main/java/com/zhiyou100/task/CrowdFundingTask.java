@@ -24,6 +24,8 @@ import java.util.List;
  @Date:2018/9/21 10:57 
  @Version:v1.0
 */
+
+/*定时审核提交的项目*/
 @Slf4j
 @Component
 public class CrowdFundingTask {
