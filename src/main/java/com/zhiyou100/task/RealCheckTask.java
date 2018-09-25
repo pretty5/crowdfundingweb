@@ -19,6 +19,9 @@ import java.util.List;
  @Date:2018/9/20 17:20 
  @Version:v1.0
 */
+
+/*审核提交的实名认证*/
+
 @Component
 @Slf4j
 public class RealCheckTask {
