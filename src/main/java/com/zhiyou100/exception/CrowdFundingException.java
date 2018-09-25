@@ -7,6 +7,7 @@ package com.zhiyou100.exception;
  @Date:2018/9/18 17:19 
  @Version:v1.0
 */
+/*如果属于实现的异常类，通过定义的异常类（控制层的异常类），抛出此类异常*/
 public class CrowdFundingException extends Exception {
 
     private int code;
