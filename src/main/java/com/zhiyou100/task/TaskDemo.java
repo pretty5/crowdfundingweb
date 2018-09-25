@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
  @Date:2018/9/18 9:57 
  @Version:v1.0
 */
+/*定时demo*/
+
 @Component
 public class TaskDemo {
     public static void main(String[] args) {
